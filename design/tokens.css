@@ -1,0 +1,43 @@
+/* User-supplied palette. Seed for the future app; not a built stylesheet. */
+:root {
+  color-scheme: light;
+  --text-primary: #2B211B;
+  --bg-primary: #F6F2EE;
+  --bg-surface: #EDE6DF;
+  --border: #D7C8BC;
+  --text-secondary: #6B5A4E;
+  --accent: #6F4E37;
+  --accent-foreground: #F6F2EE;
+  --focus: var(--text-primary);
+  --series-1: #6f4e37;
+  --series-2: #845d42;
+  --series-3: #996c4c;
+  --series-4: #af7c57;
+  --series-5: #c48b61;
+  --series-6: #d99a6c;
+  --series-7: #dfa578;
+  --series-8: #e4b085;
+  --series-9: #eabb91;
+  --series-10: #efc69d;
+}
+
+/* Explicit theme choice overrides the system default. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --text-primary: #D6C2B2;
+  --bg-primary: #121110;
+  --bg-surface: #1A1816;
+  --border: #2A2623;
+  --text-secondary: #B8A89A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --text-primary: #D6C2B2;
+    --bg-primary: #121110;
+    --bg-surface: #1A1816;
+    --border: #2A2623;
+    --text-secondary: #B8A89A;
+  }
+}

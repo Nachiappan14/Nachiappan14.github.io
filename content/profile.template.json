@@ -1,0 +1,64 @@
+{
+  "status": "Synced from user-supplied README and chat inputs; null means not supplied.",
+  "displayName": "Nachiappan S K",
+  "role": "Backend engineer",
+  "audience": [
+    "Recruiters",
+    "Collaborators",
+    "Startups"
+  ],
+  "positioning": "I build distributed networking services, backend APIs, and infrastructure automation.",
+  "bio": "Software engineer with 3+ years at Oracle Cloud Infrastructure, building Tier 0 distributed networking services across backend APIs, infrastructure automation, security, and production operations. Combines computer science fundamentals with hands-on experience taking complex systems from design and implementation through validation, rollout, and incident response. Delivered deployment automation and regional build improvements through cross-team engineering. Brings Python/PyTorch research and applied AI/ML experience in data-drift detection, NLP, and computer vision, alongside AI-assisted development and leadership as an elected Student Affairs Council member at IIIT Bangalore.",
+  "portrait": {
+    "localPath": "resources/hero_image.jpg",
+    "alt": "Portrait of Nachiappan S K",
+    "cropFocus": "Inspect actual image before choosing desktop/mobile crops."
+  },
+  "aboutPhoto": null,
+  "projects": [
+    {
+      "name": "Campus security analytics",
+      "problem": "Turn a campus security video analytics concept into a working system.",
+      "personalContribution": "Worked with team and customers to turn concept into working video analytics system.",
+      "features": [
+        "Intrusion detection",
+        "Person and vehicle tracking",
+        "Number plate recognition",
+        "Real time alerts"
+      ],
+      "verifiedResultOrImplementationDetail": "Demonstrated at Bangalore Tech Summit 2022; piloted at NIMHANS.",
+      "evidenceStatus": "User-supplied; preserve team attribution and historical demonstration/pilot wording.",
+      "screenshotLocalPath": "resources/project_1.png",
+      "screenshotAlt": null,
+      "repositoryUrl": null,
+      "demoUrl": "https://sahasraaksha.github.io/",
+      "technologies": []
+    },
+    {
+      "name": "Flash cards app",
+      "problem": null,
+      "personalContribution": "Built multiuser decks, timed study, quizzes with friends, attempt reviews, leaderboard.",
+      "verifiedResultOrImplementationDetail": "Multiuser decks, timed study, quizzes with friends, attempt reviews and leaderboard.",
+      "screenshotLocalPath": "resources/project_2.png",
+      "screenshotAlt": null,
+      "repositoryUrl": null,
+      "demoUrl": null,
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Jenkins",
+        "Docker",
+        "Ansible",
+        "ELK"
+      ]
+    }
+  ],
+  "email": "nicenach149@gmail.com",
+  "githubUrl": "https://github.com/Nachiappan14",
+  "linkedinUrl": "https://www.linkedin.com/in/mr-nskn/",
+  "resumeLocalPath": "resources/Nachiappan_resume.pdf",
+  "positioningStatus": "Suggested hero copy derived from supplied bio; not a user-written quote.",
+  "mobile": "8300843618",
+  "screenshotReviewNote": "Both supplied PNG files have identical SHA-256 hashes. Inspect image content; do not present the same screen as two distinct project interfaces. If it matches only one project, use it there and omit the other image or show an explicitly labeled local draft slot pending replacement."
+}
