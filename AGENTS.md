@@ -29,7 +29,7 @@ If a listed path moves, locate the installed skill by name. Carry these three re
 
 ## Design contract
 
-- One strong moment: real portrait + oversized horizontally moving name. Static visible role: Backend engineer.
+- Use supplied portrait as dominant, full-width hero image. Place plain navigation over its top, keep ‘Backend engineer’ visibly beside portrait, and run oversized moving name across image’s lower edge. Keep name clear of face; provide static readable name, pause, and reduced-motion fallback. Adapt crop and placement for mobile.
 - Then calm About with boxed photo, selected project stories and Contact.
 - Exact user theme tokens: `design/tokens.css`. One font family, square photo frames, equal outer gutters, flat surfaces.
 - Plain top navigation, theme switch, mobile menu. Native scrolling; slim top reading-progress indicator.

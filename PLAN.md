@@ -31,7 +31,7 @@ Suggested first-screen copy: **Nachiappan S K** / **Backend engineer** / “I bu
 
 ## Page argument and layout
 
-1. **Hero: who this is.** Real portrait, readable name, static role and one sentence explaining actual work. Desktop: plain nav above portrait occupying roughly half the screen or more; oversized moving name in a separate lower band, not over face or role. One-screen impression without a preloader. Use `min-height`, not rigid viewport height that clips short screens.
+1. **Hero: who this is.** Use supplied portrait as dominant, full-width hero image. Place plain navigation over its top, keep ‘Backend engineer’ visibly beside portrait, and run oversized moving name across image’s lower edge. Keep name clear of face; provide static readable name, pause, and reduced-motion fallback. Adapt crop and placement for mobile. Keep one sentence explaining actual work and the primary action visible. One-screen impression without a preloader. Use `min-height`, not rigid viewport height that clips short screens.
 2. **About: what this person focuses on.** Heading, 70–120 words from supplied bio, rectangular 4:5 portrait in a surface-colored box. Desktop: prose left, photo right. Mobile: heading, photo, prose. Add experience only when supplied, inside this section.
 3. **Projects: proof of capability.** 2–4 stacked stories, strongest first. Each: real screenshot, project name, problem, personal contribution, verified result (or implementation detail when no metric exists), concise technologies, working repository/demo links. First project gets largest image; avoid repeated card grids. A short project anchor list can sit under heading. Mobile: screenshot then text. No invented sample achievements.
 4. **Contact: clear next step.** Short invitation, real email and supplied GitHub/LinkedIn. Résumé link only with real PDF. Compact footer repeats name; no huge empty closing screen.
@@ -46,7 +46,7 @@ flowchart TD
 ## Navigation, motion and mobile
 
 - Interpret “toggle bars and scroll bars in top” as plain top links **About / Projects / Contact**, a labeled theme switch, hamburger menu on mobile, and slim reading-progress bar at the top. This is a reversible assumption; no custom scrollbar or scroll hijacking.
-- Header initially sits above image. If made sticky, use opaque theme background and `scroll-margin-top` so anchors stay visible. Mobile menu is an in-flow disclosure: `aria-expanded`, keyboard support, Escape closes and returns focus.
+- Header overlays the top of the hero image with plain navigation and sufficient image contrast. If sticky beyond the hero, use opaque theme background and `scroll-margin-top` so anchors stay visible. Mobile menu is an in-flow disclosure: `aria-expanded`, keyboard support, Escape closes and returns focus.
 - Name marquee is the signature motion. Start around 25–40 seconds per cycle; duplicate copies are `aria-hidden`. Keep one fully readable semantic name, one `h1`, plus static role. A long public name may use a separate readable two-line title while decorative band crops.
 - Provide visible Pause motion control. Pause on hover/focus and when offscreen; preserve explicit pause. Reduced motion shows static name and stops image drift/entrances. No script means visible content and working native anchors.
 - Optional small once-only section entrances and gentle portrait movement use transform/opacity only. Avoid motion quotas that clutter this restrained brief. No pinned scenes, typewriter roles, background videos or loading gates.

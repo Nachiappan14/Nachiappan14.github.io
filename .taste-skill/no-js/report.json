@@ -1,0 +1,646 @@
+{
+ "url": "http://127.0.0.1:4173",
+ "at": "2026-11-02T20:41:39.343Z",
+ "allow": [
+  "few-pictures",
+  "still-page",
+  "palette-cream",
+  "eyebrow"
+ ],
+ "viewports": [
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.63,
+    0.71,
+    0.6,
+    0.75,
+    0.73,
+    0.78
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4707,
+     "screens": 5.6,
+     "words": 342,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "portrait-640.webp",
+      "portrait-640.webp",
+      "campus-site.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Nachiappan S K",
+     "words": 3,
+     "chars": 14,
+     "lines": 2,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Bricolage Grotesque",
+     "weight": 700,
+     "tracking": -0.045,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.75,
+     "top": 129,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Nachiappan S K",
+     "words": 3,
+     "lines": 2,
+     "size": 44,
+     "font": "Bricolage Grotesque"
+    },
+    "headings": [
+     {
+      "text": "Nachiappan S K",
+      "words": 3,
+      "chars": 14,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 129,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Backend engineer",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Bricolage Grotesque",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 236,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Nachiappan S K —",
+      "words": 4,
+      "chars": 16,
+      "lines": 1,
+      "size": 80,
+      "vw": 20.5,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 871,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "About me",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 1104,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "From a system’s first design to the realities of production.",
+      "words": 10,
+      "chars": 60,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Bricolage Grotesque",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.35,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1680,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Selected projects",
+      "words": 2,
+      "chars": 17,
+      "lines": 1,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2522,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Campus analytics",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2952,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Flash cards",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 3531,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Let’s work together.",
+      "words": 3,
+      "chars": 20,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Bricolage Grotesque",
+      "weight": 700,
+      "tracking": -0.045,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 4216,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "nicenach149@gmail.com ↗",
+      "words": 2,
+      "chars": 23,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Bricolage Grotesque",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.72,
+      "top": 4417,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Bricolage Grotesque",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      16,
+      18,
+      24,
+      32,
+      44,
+      80
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Bricolage Grotesque",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.1
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 80,
+      "vw": 20.5,
+      "font": "Bricolage Grotesque",
+      "text": "Nachiappan S K —"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f2ee",
+     "bodyBgHsl": {
+      "h": 30,
+      "s": 0.31,
+      "l": 0.95
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ede6df",
+       "top": 1179,
+       "hsl": {
+        "h": 30,
+        "s": 0.28,
+        "l": 0.9
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#2b211b",
+       "share": 0.86
+      },
+      {
+       "color": "#6b5a4e",
+       "share": 0.13
+      },
+      {
+       "color": "#f6f2ee",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#2b211b",
+      "hsl": {
+       "h": 23,
+       "s": 0.23,
+       "l": 0.14
+      },
+      "fg": "#f6f2ee"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "View projects ↘"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.39
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 109,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "bricolage grotesque"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4707,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 109,
+      "height": 908,
+      "words": 29,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Nachiappan",
+       "size": 44,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 0,
+      "textRight": 0,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about.section-shell",
+      "tag": "section",
+      "top": 1016,
+      "height": 1418,
+      "words": 137,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "About me",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 23,
+      "textLeft": 20,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.section-intro",
+      "tag": "div",
+      "top": 2522,
+      "height": 141,
+      "words": 6,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 204,
+      "textLeft": 20,
+      "textRight": 204,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article#campus.campus-project",
+      "tag": "article",
+      "top": 2695,
+      "height": 764,
+      "words": 77,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Campus analytics",
+       "size": 32,
+       "tag": "h3"
+      },
+      "left": 20,
+      "right": 28,
+      "textLeft": 20,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "article#flashcards.flash-project",
+      "tag": "article",
+      "top": 3507,
+      "height": 565,
+      "words": 71,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Flash cards",
+       "size": 32,
+       "tag": "h3"
+      },
+      "left": 44,
+      "right": 45,
+      "textLeft": 44,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact.contact",
+      "tag": "section",
+      "top": 4160,
+      "height": 459,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Let’s work together.",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 30,
+      "textLeft": 20,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Nachiappan S K",
+      "size": 44,
+      "top": 129,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 14
+     },
+     {
+      "x": 44,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 17,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [],
+ "images": [
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/nachiappan-senthil-kumar/AI/PersonalWebsite/.taste-skill/no-js/mobile-fold.jpg",
+   "pages": [
+    "/home/nachiappan-senthil-kumar/AI/PersonalWebsite/.taste-skill/no-js/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -1,6 +1,6 @@
-# Personal portfolio — initialization
+# Personal portfolio
 
-Status: planning complete; application not built. Local preview comes first. No GitHub push or deployment is authorized.
+Status: local portfolio built and production preview verified. No GitHub push or deployment is authorized.
 
 Start with `AGENTS.md`, then `PLAN.md`. User-supplied inputs below are authoritative; `content/profile.template.json` mirrors them as a worksheet. Exact palette is ready in `design/tokens.css`.
 
@@ -8,7 +8,26 @@ Start with `AGENTS.md`, then `PLAN.md`. User-supplied inputs below are authorita
 
 > Read AGENTS.md, README.md inputs and PLAN.md. Read and apply design-taste-frontend, visualize:visualize and caveman using the skill paths in AGENTS.md. Build the local portfolio described there with Vite, vanilla TypeScript and plain CSS. Reuse design/tokens.css. Complete a responsive portrait hero, calm About, real project stories and Contact. Use supplied assets; label missing content in the local draft. Verify the production preview at desktop, tablet and mobile widths, keyboard navigation and reduced motion. Return the local preview URL and concise verification results. Do not push, publish or deploy.
 
-No dependency install, application build or browser QA has happened yet. `.taste-skill/direction.json` records the design draw; PLAN.md records the project-specific adaptations. Do not read the full draw unless a design decision needs clarification.
+`.taste-skill/direction.json` records the design draw; PLAN.md records the project-specific adaptations. The implementation retains that direction. See `QA.md` for browser checks, screenshots, critique, and intentional exceptions.
+
+## Run locally
+
+Use Node 22.12+ (verified with Node 22.13.0).
+
+```sh
+npm ci
+npm run dev
+```
+
+Production verification:
+
+```sh
+npm run check
+npm run build
+npm run preview -- --host 127.0.0.1
+```
+
+Production preview: http://127.0.0.1:4173/. Vite 8.3.5 and TypeScript 7.0.2 are exact development dependencies; runtime dependencies are zero. Content lives in semantic `index.html`, styles in `src/styles.css`, and progressive enhancements in `src/main.ts`. Public assets and the licensed self-hosted font live in `public/`. Original resources and exact theme tokens are preserved.
 
 ## User-supplied inputs
 
@@ -39,7 +58,7 @@ No dependency install, application build or browser QA has happened yet. `.taste
 
 Theme, menu, reading progress, name marquee and pause are required enhancements. Consider subtle section entrances or portrait drift after browser review.
 
-Name, portrait and résumé paths verified locally. Image crop and résumé contents have not been reviewed during this handoff update.
+Name, portrait, résumé contents, and image crop reviewed locally. Employer work is summarized only at the level supplied in the bio; project stories retain team attribution.
 
 See PLAN.md for the build sequence, file layout and acceptance checks.
 
