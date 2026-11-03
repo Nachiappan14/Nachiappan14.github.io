@@ -1,127 +1,125 @@
-# Portfolio build plan
+# Portfolio revision plan
 
-## Goal and decisions
+## Status and scope
 
-Make a strong first impression, then make evidence easy to read. Audience: recruiters, collaborators and startups (confirmed). Role: **Backend engineer**; supporting copy can use “software engineer” where accurate. Public name **Nachiappan S K** is confirmed in the user-edited README. Portrait and résumé are supplied at `resources/hero_image.jpg` and `resources/Nachiappan_resume.pdf`. Keep full supplied bio from README; the worksheet mirrors it.
+Requirements updated 3 November 2026. The assigned hero/project revision is now implemented locally. Fresh production checks, screenshots, critique and limits are recorded at the top of `QA.md`; the older QA remains historical. Requirements and the sequence below remain the approved brief.
 
-Primary action: **View projects**. Secondary outcome: contact through supplied public email/profile. No blog, dashboard, skill meters, testimonial section or standalone case-study routes in v1.
+Read `AGENTS.md`, then authoritative user inputs in `README.md`, then this plan. The worksheet in `content/profile.template.json` mirrors supplied content. Keep existing work, stack, content, palette and interactions. No scaffold, dependency migration, Git push, repository creation, deployment, hosting changes or public uploads.
 
-Stack retained from referenced planning chat: **Vite, vanilla TypeScript, plain CSS, npm**, static single page. No backend or custom domain. Future destination may be GitHub Pages; publication is deferred until the user explicitly requests it.
+Audience: recruiters, collaborators and startups. Public name: **Nachiappan S K**. Role: **Backend engineer**. Primary action: **View projects**. Page order: Hero → About → Projects → Contact. No blog, skill meters, testimonials or extra routes.
 
-## References and direction
+## Baseline implementation and findings before revision
 
-- [Dennis Snellenberg](https://dennissnellenberg.com/): requested inspiration for portrait opening, oversized moving name and navigation. Borrow hierarchy and movement principles, not assets/code or exact composition.
-- [Rithwik](https://www.rtwksai.com/): requested inspiration for readable biography and selected work. Its retrieved page has direct bio/project content; retain that clarity.
-- Prior chat `01a19d67-bed0-7c02-ad9b-a4baf1cd3630` was read. Stack and static hosting scope retained; current local-only instruction supersedes publication planning.
-- Reference text was retrieved; live animation and responsive appearance were not visually audited during planning.
+| File or asset | Current responsibility / finding |
+| --- | --- |
+| `index.html` | Semantic page content, hero picture and copy, project articles, native anchors, metadata and public links. |
+| `src/styles.css` | Plain CSS, tokens, local font, responsive layout and marquee. Main revision location. |
+| `src/main.ts` | Theme persistence, mobile menu, reading progress, reduced motion, explicit and offscreen marquee pause. Preserve behavior and DOM hooks. |
+| `design/tokens.css` | Exact user palette for both themes; preserve values. |
+| `public/images/portrait-*` | Existing optimized portrait derivatives used by both hero and About. Still based on the older portrait composition. |
+| `resources/hero_image.jpg` | New authoritative hero source: 1273×955, approximately 4:3. Inspected: subject left of center, face in upper part, open background to right. |
+| `resources/hero_image_2.jpg` | Existing alternate portrait: 3048×3588. Do not select it as hero merely because it is larger. |
+| `resources/project_1.png`, `resources/project_2.png` | Byte-identical campus-site screenshots; one cannot represent two different products. |
+| `package.json`, lockfile, `tsconfig.json` | Existing Vite 8.3.5 / TypeScript 7.0.2, exact dev dependencies, zero runtime dependencies. Reuse. |
+| `QA.md`, `.taste-skill/` | Prior verification evidence and recorded direction; retain as history. |
 
-Design draw: **The name as a monument**, seed **1911319021**, Bricolage Grotesque, edge-to-edge marquee. Raw record: `.taste-skill/direction.json`.
+Root causes of the supplied mobile screenshot:
 
-The initial three options were type-only statement, contact sheet and quiet instrument. Each conflicts with the explicitly requested portrait-led hero or restrained content density. Direction changed to name-as-monument for that reason. Keep supplied palette.
+- At ≤640px, `.hero-stage` uses `padding-top: 560px`; `.hero-portrait` is fixed at 560px; `.hero-copy` becomes a full-width opaque block below it. At 641–1000px, the same split uses 680px. This creates the unwanted separate introduction panel.
+- `.role` is independently positioned over the portrait with an opaque background, separating it from supporting copy.
+- `.name-band` has a full-width dark scrim. The header also has a broad scrim. These obscure the photo and reinforce the visual bands.
+- Changing the resource file does not regenerate `public/images/portrait-*`. HTML also retains the older image dimensions.
+- Campus is already one semantic article, but image and two-column story have separate visual treatment and large gaps. Flash cards uses a different filled wrapper. Both need one consistent card treatment, with each project's evidence and actions visibly contained together.
 
-Project adaptations override incompatible dealt slots: replace tiled hero rails with one large portrait stage; replace floated bio with a boxed portrait beside prose; replace 9–16-project wall with 2–4 actual project stories; replace venue-address contact and full-screen empty footer with compact personal links and name close. Reasons: requested simplicity, no venue/address content, only two supplied project stories. No extra scroll scenes.
+## Reference decisions
 
-Idea: **On this page, Nachiappan S K’s name and portrait become the opening signature; actual backend work supplies the proof below.** Inspect the supplied photo before deciding crop. Supplied bio emphasizes distributed networking and production ownership; let actual project evidence carry these themes. Live interaction: choose a project from a short title list to jump to its visible story; native anchors work without JS.
+- [Dennis Snellenberg](https://dennissnellenberg.com/): portrait filling the opening stage, plain navigation over image, oversized moving name over lower image, role off the face. User clarified the “Daniel” reference with this URL. Borrow responsive composition principles, not assets, code, preloader or custom cursor.
+- [Rithwik](https://www.rtwksai.com/) and its [projects page](https://www.rtwksai.com/projects): grouped project information in single containers and quiet separation between content areas. Treat “Refik Size” as this previously recorded reference unless corrected. Do not copy its technology badges, rounded outlines or framework.
+- Live review on 3 November 2026: Dennis landscape screenshot shows one continuous image, unboxed role at right and transparent large-name overlay. DOM inspection confirms the portrait uses `object-fit: cover` and the hero has a viewport-related minimum height. Rithwik’s mobile projects view shows each project grouped in its own container, and its home page shows a faint horizontal content divider. Our square flat cards adapt these principles to the existing theme.
+- Limitation: the attempted 390×844 override did not take effect on Dennis (reported viewport remained 1280×720); do not claim its phone crop or all responsive behavior was verified. The phone full-screen requirement remains explicit user direction. Exact responsive crop and collision checks belong to implementation QA. Reference observations do not validate our pending redesign.
 
-## Confirmed subject material
+Retain recorded **The name as a monument**, seed **1911319021**, Bricolage Grotesque, `.taste-skill/direction.json`. Do not redraw. Idea: Nachiappan's portrait and name establish identity; real engineering work supplies evidence below.
 
-User bio supplies: 3+ years at Oracle Cloud Infrastructure; Tier 0 distributed networking services; backend APIs; infrastructure automation; security and production operations; design through rollout and incident response; cross-team deployment/regional build improvements; Python/PyTorch research; data-drift detection, NLP and computer vision; elected Student Affairs Council role at IIIT Bangalore. These are user-provided claims, not independently audited metrics. Do not invent numerical outcomes, employer screenshots or named project details.
+## Requirements
 
-Suggested first-screen copy: **Nachiappan S K** / **Backend engineer** / “I build distributed networking services, backend APIs, and infrastructure automation.” Primary action remains **View projects**. This supporting sentence is drafted from the supplied bio, not quoted from the user. Keep AI/ML and leadership detail in About, subordinate to backend focus.
+### H1 — One continuous full-screen portrait hero
 
-## Page argument and layout
+- New `resources/hero_image.jpg` is the hero source. Regenerate responsive public derivatives and update HTML intrinsic dimensions/srcset together. Do not stretch or upscale a 1273px source into claimed extra detail. Keep original files intact. About may retain its existing portrait derivatives under separate names if needed; the hero refresh must not silently break About's crop or dimensions.
+- Fill the opening viewport edge to edge on desktop, tablet and phone, in portrait and landscape orientations. “Full screen” describes the opening composition, not the browser Fullscreen API or a pinned scroll scene.
+- Use one hero stage with photograph covering its complete area, typically `object-fit: cover` and breakpoint-specific `object-position`. The image's 4:3 source ratio must not set a 4:3 hero box. A tall phone intentionally shows a tighter crop; landscape shows more surrounding scene. Never use `contain`, letterboxing or distortion.
+- Start with `min-height: 100svh` and a suitable `100vh` fallback. Allow height to grow when text enlargement, no-JS navigation or short landscape screens need room. Avoid rigid height/overflow rules that clip essential content. Account for mobile browser chrome and safe-area insets.
+- Remove the 560px/680px portrait heights, padding-top spacer technique and breakpoint rules that send supporting copy below the photo. About begins after the complete hero.
+- Apply a modest additional crop/zoom only if needed after browser review. `cover` already zooms considerably on a tall phone; no arbitrary scale that cuts off the head. Protect headroom, full face and recognizable shoulders. Tune the actual image rather than centering blindly.
 
-1. **Hero: who this is.** Use supplied portrait as dominant, full-width hero image. Place plain navigation over its top, keep ‘Backend engineer’ visibly beside portrait, and run oversized moving name across image’s lower edge. Keep name clear of face; provide static readable name, pause, and reduced-motion fallback. Adapt crop and placement for mobile. Keep one sentence explaining actual work and the primary action visible. One-screen impression without a preloader. Use `min-height`, not rigid viewport height that clips short screens.
-2. **About: what this person focuses on.** Heading, 70–120 words from supplied bio, rectangular 4:5 portrait in a surface-colored box. Desktop: prose left, photo right. Mobile: heading, photo, prose. Add experience only when supplied, inside this section.
-3. **Projects: proof of capability.** 2–4 stacked stories, strongest first. Each: real screenshot, project name, problem, personal contribution, verified result (or implementation detail when no metric exists), concise technologies, working repository/demo links. First project gets largest image; avoid repeated card grids. A short project anchor list can sit under heading. Mobile: screenshot then text. No invented sample achievements.
-4. **Contact: clear next step.** Short invitation, real email and supplied GitHub/LinkedIn. Résumé link only with real PDF. Compact footer repeats name; no huge empty closing screen.
+### H2 — Bottom-right identity and supporting copy
 
-```mermaid
-flowchart TD
-  H[Portrait + moving name + static role] --> A[About + boxed portrait]
-  A --> P[Selected projects + evidence]
-  P --> C[Contact + public links]
-```
+- Keep **Backend engineer** and “I build distributed networking services, backend APIs, and infrastructure automation.” together in one compact overlay toward the bottom right at every normal viewport. Keep the static semantic name and View projects action readable within the same hero.
+- “Bottom right” means the lower-right region above the marquee lane, not text flush against the viewport corner. Use shared gutters, a readable maximum width and layout space reserved for name motion and controls. Text alignment may remain left within the right-anchored block.
+- Place the face higher/left of the copy through deliberate crop and placement. No header, role, description, CTA or marquee may intersect the face during resizing. On phones, copy may overlay lower torso/background while the face stays clear above it.
+- Remove the opaque hero-copy panel and independent opaque role badge. Remove the full-width dark marquee background; large name sits directly over the photograph. Header should read as plain navigation over the image, not a broad opaque banner.
+- Contrast must be checked on the actual photo in both themes and at every tested crop. Choose readable ink; if necessary use a small neutral flat scrim confined to text bounds. No full-width underlay, glass, gradient, shadow or replacement below-image panel.
+- Keep a visible static full name and exactly one semantic `h1`. Decorative marquee duplicates remain `aria-hidden`. Preserve pause/resume, reduced-motion and no-JS static fallback. A clipped decorative name does not replace a readable name.
+- Reserve separate vertical space for bottom-right copy, lower-edge marquee and pause control. Reflow/compact spacing at short heights; allow hero to grow if necessary. Never solve collisions by hiding role, description, CTA or static name, or by reducing body text below a readable size.
 
-## Navigation, motion and mobile
+### P1 — One unified card per project
 
-- Interpret “toggle bars and scroll bars in top” as plain top links **About / Projects / Contact**, a labeled theme switch, hamburger menu on mobile, and slim reading-progress bar at the top. This is a reversible assumption; no custom scrollbar or scroll hijacking.
-- Header overlays the top of the hero image with plain navigation and sufficient image contrast. If sticky beyond the hero, use opaque theme background and `scroll-margin-top` so anchors stay visible. Mobile menu is an in-flow disclosure: `aria-expanded`, keyboard support, Escape closes and returns focus.
-- Name marquee is the signature motion. Start around 25–40 seconds per cycle; duplicate copies are `aria-hidden`. Keep one fully readable semantic name, one `h1`, plus static role. A long public name may use a separate readable two-line title while decorative band crops.
-- Provide visible Pause motion control. Pause on hover/focus and when offscreen; preserve explicit pause. Reduced motion shows static name and stops image drift/entrances. No script means visible content and working native anchors.
-- Optional small once-only section entrances and gentle portrait movement use transform/opacity only. Avoid motion quotas that clutter this restrained brief. No pinned scenes, typewriter roles, background videos or loading gates.
-- 20px phone / 32px desktop equal gutters; content max-width about 1200px below hero. Body 17–19px, readable measure 60–70ch. Headings at most two lines, at most five size roles. Bricolage Grotesque with system sans fallback; self-host licensed WOFF2 when available, never block rendering on a font request.
-- Theme defaults to system preference; persist explicit choice locally with guarded storage. Apply theme before paint. Theme toggling works independently of motion controls.
+- Render two stacked, full-width project cards within the normal content shell. Each remains a semantic `<article>` with its existing anchor and heading association. No carousel or repeated multi-column card grid.
+- All content for one project belongs inside one visually unified surface: screenshot/caption when accurate, project title, short description, contribution/features, historical outcome or implementation detail, project-site/repository links when supplied, and technologies when verified.
+- Use a flat theme surface, square corners and consistent inner padding/gaps. No resting shadow or border around every nested element. Screenshot must feel part of the card, not a detached full-bleed section above it.
+- Desktop/tablet with sufficient space: media and content may share a two-column card. Phone: media → title → description/contribution → available links → technologies/details. Keep all text readable and natural in DOM order. Title and links must not form a remote column disconnected from description.
+- Campus analytics stays first, with its accurate campus website screenshot and Project site action inside the card. Preserve team/customer attribution and historical Bangalore Tech Summit 2022 / NIMHANS wording. Include only supplied or résumé-verified technologies.
+- Flash cards uses the same outer card style and spacing. No distinct screenshot or URL is supplied: omit image and absent action; use an intentional text-only card. Never reuse campus screenshot or display broken images. Missing optional assets do not block implementation.
+- Keep real links individually keyboard accessible. Do not wrap the entire article in an anchor containing other actions or make a generic clickable container.
 
-## Palette and contrast
+### P2 — Soft horizontal project separators
 
-Exact values are initialized in `design/tokens.css`. Ground 70–90%, accent under 5%; no charts or gradients merely because a series palette exists. Borders retained as tokens, not decorative card outlines.
+- Add one quiet horizontal separator between adjacent project cards, aligned to content gutters, with equal breathing room above and below. A native `<hr>` is suitable; avoid a double line from adjacent card borders.
+- Start with a 1px solid theme border token from `design/tokens.css`. Keep it subtle but visible in both themes; do not change palette values. The rule separates projects, not every paragraph or card component.
+- This explicit user request overrides the old project prohibition on decorative rules and the design skill's general thin-rule/card defaults. Keep the exception scoped to project grouping and separation. Do not suppress unrelated inspector failures.
 
-Brown `#6F4E37` is unsuitable for small text directly on the dark background. Use primary text for links with underlining/focus; use brown as a filled CTA with light foreground. Measure normal text at >=4.5:1, large text and meaningful controls at >=3:1 on actual backgrounds. Use primary text token for focus rings and reading progress in dark mode. Verify CTA separation; use neutral primary-text fill/background-text pairing if brown fails control visibility. Preserve the accent token.
+## Retained content and behavior
 
-User palette and simple v1 content take precedence over skill defaults. Do not add unrelated images to meet a four-image quota or extra animations to meet a motion quota. Aim for portrait plus real project screenshots where supplied. Record any resulting inspector quota warning honestly; fix actual accessibility/layout failures. No brand recoloring to satisfy an automated aesthetic rule.
+About remains calm: supplied bio and boxed photo, prose/photo split on desktop and stacked on mobile. Backend focus stays primary; AI/ML and leadership stay in About. Contact uses real email, GitHub, LinkedIn, supplied phone and résumé. No invented achievements, metrics, clients or employer details.
 
-## Implementation structure
+Public content is authoritative in README/worksheet. Campus team project: intrusion detection, person/vehicle tracking, number plate recognition and alerts; demonstrated at Bangalore Tech Summit 2022 and piloted at NIMHANS. Flash cards: multiuser decks, timed study, friend quizzes, attempt review and leaderboard; supplied stack React, Node.js, MongoDB, Jenkins, Docker, Ansible, ELK. Do not ask for already-supplied details; read résumé for facts when needed and omit confidential employer information.
 
-```text
-index.html                 # semantic content, metadata, section anchors
-src/main.ts                # initialize small behaviors
-src/styles.css             # layout/type/responsive; import tokens
-src/theme.ts               # only if theme code warrants separation
-src/motion.ts              # marquee pause, reduced motion, entrances
-design/tokens.css          # existing exact theme values
-content/profile.template.json # input worksheet, not a second rendering framework
-public/images/             # supplied/optimized portraits and screenshots
-public/documents/          # optional public résumé
-package.json + package-lock.json + tsconfig.json
-```
+Keep system-default theme with guarded persisted choice and pre-paint application, native anchors, slim reading progress, mobile disclosure with `aria-expanded`, Escape/focus behavior, and marquee pause/offscreen pause/reduced-motion behavior. Essential content and links must work without JS. No scroll hijacking, custom cursor, preloader, router, backend, animation library or runtime dependency.
 
-Keep fixed biography and project content in HTML so JS is progressive enhancement. Transfer approved worksheet content into HTML; do not create a duplicate runtime content store. No template compiler or extra build plugin.
+Preserve exact palette, one self-hosted licensed font family, square photo frames, flat surfaces and equal gutters (approximately 20px phone / 32px desktop). Text 17–19px with readable measure; headings at most two lines. Brown accent is unsuitable for small dark-theme text: use existing accessible text/CTA pairings and verify actual contrast. No extra motion is required.
 
-## Build sequence
+## Build sequence for the assigned implementation task
 
-1. **Content + setup.** Use confirmed name and supplied portrait; inspect the image and read the résumé for relevant facts and links. Read all three required skills listed in AGENTS.md. Use explicit local draft labels only for still-missing content. Hand-create minimal Vite/TS files in this nonempty folder. Install current stable compatible Vite/TypeScript with exact versions and lockfile. Verify installed package engine requirements; current host Node 22.13.0 meets the Vite guide’s stated 22.12+ floor, but recheck installed release. No Git initialization or deploy workflow needed.
-2. **Static first screen.** Apply existing tokens; build desktop/mobile hero without motion. Crop actual portrait with `object-position`; keep face, role, CTA and nav readable. No approval pause required to continue local work.
-3. **Full page.** Add biography, real projects, contact. Missing image = clearly labeled local layout slot, no stock person. Missing optional section/link = omit. Optimize actual images to AVIF/WebP plus fallback as needed; explicit dimensions, responsive sources, eager hero, lazy below fold.
-4. **Enhancements.** Add theme, menu, reading progress, name marquee and pause. Consider subtle section entrances or portrait drift after browser review. Keep all content readable if JS fails. Use one passive scroll listener batched through requestAnimationFrame for progress and CSS animation for marquee. Use IntersectionObserver only if optional entrances are added.
-5. **Verify + handoff.** Type check and production build; serve `dist/` through `npm run preview`. Browser review both themes at 1440/768/390 and overflow at 320px; use skill lint/inspect and screenshot critique, fix top issues. Return preview URL, screenshots/check results and missing content. User reviews locally before any publication request.
+Proceed through all steps without intermediate permission prompts once the build task is assigned.
 
-Expected commands after builder creates package scripts:
+1. **Baseline.** Read all three required skills in AGENTS.md. Reuse recorded direction. Run current local site, capture hero/project before screenshots and source lint; inspect source portrait and existing assets. Preserve QA history. Use `npm ci` only if dependencies are absent; do not reinstall latest versions or regenerate the scaffold.
+2. **Assets and static hero.** Generate derivatives from the new source with truthful sizes, optimized WebP/JPEG fallback, explicit dimensions and eager hero loading. Separate About assets if retained. Update `index.html` and `src/styles.css` to satisfy H1/H2 without motion first; review landscape and portrait crops. Keep existing semantic title/links and control hooks.
+3. **Project cards.** Unify existing articles into P1, add P2 separator. Keep content in semantic HTML, preserve `#campus` / `#flashcards`, inspect screenshot accuracy, and keep missing Flash cards media/action omitted. No JS rendering/config framework.
+4. **Enhancement regression.** Retain existing `src/main.ts` where possible. Change JS only if revised DOM requires it. Check theme/menu/progress/marquee/pause and static/reduced-motion fallbacks. Do not add optional entrances or portrait drift to solve layout problems.
+5. **Production QA and handoff.** Run check/build, serve production preview, inspect all target sizes and both themes. Run skill lint/inspect and screenshot critique; record only narrowly applicable exceptions for user-required project cards/rules. Fix real overflow, collisions and contrast errors. Update QA with new evidence separately from historical results; return changed files, preview URL, checks and remaining optional content. No deployment.
 
 ```sh
-npm install --save-dev --save-exact vite typescript
 npm run dev -- --host 127.0.0.1
 npm run check
 npm run build
 npm run preview -- --host 127.0.0.1
 ```
 
-## Acceptance checks
+Scripts remain `dev: vite`, `check: tsc --noEmit`, `build: tsc --noEmit && vite build`, `preview: vite preview`. Keep exact dev dependencies and lockfile; runtime dependencies remain zero.
 
-- Five-second hero test: visitor can identify name, backend role and project action.
-- Actual portrait stays well cropped; no text crosses face; readable static title remains when marquee pauses.
-- No horizontal page overflow, clipped controls, hidden sections or heading longer than two lines. Decorative marquee clips within its own band only.
-- Keyboard reaches every control; focus visible; menu and motion toggles accurately expose state. Touch targets approximately 44px. Skip link included.
-- Both themes pass contrast; theme survives refresh; unavailable storage does not break site.
-- Pause, reduced motion and disabled-JS views remain useful. Native scrolling works on touch.
-- Project/demo/contact/PDF links resolve; missing links omitted. No placeholder claims presented as facts.
-- Production preview has no console errors or missing assets. Run skill visual QA on production output, report deviations. No app tests needed for static copy; focused behavior checks for menu/theme/motion suffice.
-- Targets, measured after actual assets: Lighthouse mobile performance/accessibility >=90; initial image budget about 500KB for hero, initial transfer about 1MB. Report actual measurements; these are goals, not promises.
+## Acceptance criteria
 
-## Content intake
+- Review production at 1440×900 desktop, 1024×768 tablet landscape, 768×1024 tablet portrait, 390×844 phone, 844×390 phone landscape, and 320×844 narrow phone. Also resize through 640/641px and 1000/1001px to catch the former split transitions. Spot-check 200% text zoom.
+- At normal target sizes, photo fills the first screen; no separate hero-copy slab or full-width marquee underlay. At short heights/enlarged text, hero may grow while photo continues behind content and controls remain reachable.
+- Face and headroom survive every crop; no text/control crosses face. Role and description remain grouped lower right, separate from marquee and pause. Static name and View projects remain readable, with no page overflow. Decorative name clips only within its own lane.
+- Both project cards read as complete units. Campus screenshot, title, description and Project site remain visibly grouped; Flash cards retains the same container treatment without fabricated media/actions. One soft separator is visible between cards in both themes.
+- Normal text contrast ≥4.5:1; large text and meaningful controls ≥3:1 against actual photo/surface backgrounds. Keyboard focus visible; touch targets about 44px. No clipped navigation or controls.
+- Check theme toggle/persistence, mobile menu open/close/Escape/focus return, all native anchors, reading progress, explicit pause/resume, offscreen pause, reduced motion, and no-JS content/links. Exercise orientation changes and resize with menu open.
+- Production preview has no missing assets or console errors. Verify supplied project/contact/PDF destinations without sending messages or activating mail/phone handlers. Preserve exact LinkedIn URL if automated access is restricted; report limitation.
+- Run skill source lint and production inspector; visually critique new screenshots. Record project-card/separator exceptions honestly. Historical QA passes are not revision passes.
+- Image goals: hero around ≤500KB and initial transfer around ≤1MB. Target Lighthouse mobile performance/accessibility ≥90 only if measured. Report actual results and source-resolution limitation; do not promise a crisp high-density desktop image from 1273px source.
 
-Name, bio, portrait and résumé are supplied in README. Local paths exist; image crop and résumé contents have not yet been reviewed. Reuse portrait for hero and boxed About unless a second image is later supplied. Builder should copy optimized image derivatives and the intended public résumé into `public/`, then link those files; do not expose the entire `resources/` folder. Keep source originals intact.
+## Handoff and optional content
 
-Two project stories, screenshot paths and public contacts are now supplied in README and mirrored in the worksheet. Build with these two projects; do not wait for more. Campus security analytics comes first. Preserve team attribution and describe demonstration/pilot as historical events, not current deployments. Flash cards app has no supplied project URL: omit its demo/repository action unless the résumé supplies an explicit matching link. Inspect both screenshots before assigning crops and captions. Do not invent technologies for campus analytics, numerical results or private employer details.
+Implement from existing files; return preview URL only after server is actually running. Report changed files, checks performed, screenshots/critique and genuine limitations. Distinct Flash cards screenshot/URL and separate About photo remain optional. No extra projects are needed.
 
-Public contacts: nicenach149@gmail.com; GitHub https://github.com/Nachiappan14; LinkedIn https://www.linkedin.com/in/mr-nskn/; mobile 8300843618. Display the supplied phone exactly; use `tel:8300843618` without guessing a country prefix. All were explicitly supplied for public contact.
-
-Required build skills: design-taste-frontend, visualize:visualize and caveman, with exact paths and scope in AGENTS.md.
-
-## Sources and deferred hosting
-
-[Vite guide](https://vite.dev/guide/) confirms vanilla-ts template and Node requirements. [Vite static deployment](https://vite.dev/guide/static-deploy.html) covers production preview and future Pages configuration. For eventual root username.github.io site use base `/`; project subpaths need their matching base. Add deployment workflow only after explicit publication request. Do not repeat hosting research during local build unless a decision changes.
-
-## Screenshot check
-
-`resources/project_1.png` and `resources/project_2.png` are byte-identical (SHA-256 verified). Builder must inspect image content before assigning it. Do not present one screen as two distinct project interfaces; use it only where accurate and omit the other image or use an explicitly labeled local draft slot pending replacement. This does not block the rest of the local build.
+Required skills remain design-taste-frontend, visualize:visualize and caveman at the paths in AGENTS.md. Use visualize only when an in-chat preview/explanation helps; it does not replace the local site or require another mockup. Keep portfolio copy, code and accessibility labels grammatical.

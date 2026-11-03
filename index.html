@@ -35,13 +35,15 @@
         <div class="hero-stage">
           <div class="hero-copy">
             <h1 id="hero-title">Nachiappan S K</h1>
-            <p class="role">Backend engineer</p>
-            <p class="hero-description">I build distributed networking services, backend APIs, and infrastructure automation.</p>
+            <div class="hero-work">
+              <p class="role">Backend engineer</p>
+              <p class="hero-description">I build distributed networking services, backend APIs, and infrastructure automation.</p>
+            </div>
             <a class="primary-action" href="#projects">View projects <span aria-hidden="true">↘</span></a>
           </div>
           <picture class="hero-portrait">
-            <source type="image/webp" srcset="/images/portrait-640.webp 640w, /images/portrait-1280.webp 1280w, /images/portrait-1920.webp 1920w" sizes="100vw">
-            <img src="/images/portrait-1280.jpg" width="1280" height="1507" alt="Nachiappan S K wearing a teal kurta" fetchpriority="high">
+            <source type="image/webp" srcset="/images/hero-640.webp 640w, /images/hero-1273.webp 1273w" sizes="(max-aspect-ratio: 4/3) 134vh, 100vw">
+            <img src="/images/hero-1273.jpg" srcset="/images/hero-640.jpg 640w, /images/hero-1273.jpg 1273w" sizes="(max-aspect-ratio: 4/3) 134vh, 100vw" width="1273" height="955" alt="Nachiappan S K wearing a teal kurta" fetchpriority="high">
           </picture>
         <div class="name-band" aria-hidden="true">
           <div class="name-track"><span>Nachiappan S K&nbsp; —&nbsp; </span><span>Nachiappan S K&nbsp; —&nbsp; </span></div>
@@ -75,19 +77,26 @@
           <h2 id="projects-title">Selected projects</h2>
           <nav class="project-index" aria-label="Jump to a project"><a href="#campus">Campus analytics ↘</a><a href="#flashcards">Flash cards ↘</a></nav>
         </div>
-        <article class="campus-project" id="campus" aria-labelledby="campus-title">
+        <article class="project-card campus-project" id="campus" aria-labelledby="campus-title">
           <figure class="project-image">
             <picture><source type="image/webp" srcset="/images/campus-site.webp"><img src="/images/campus-site.png" width="1905" height="921" alt="Sahasraaksha project website introducing its CCTV security and analytics system" loading="lazy"></picture>
             <figcaption>Sahasraaksha · Project website</figcaption>
           </figure>
           <div class="project-story">
-            <div><h3 id="campus-title">Campus analytics</h3><p class="project-subtitle">Video analytics for campus security</p><a class="text-link" href="https://sahasraaksha.github.io/" target="_blank" rel="noopener noreferrer">Visit project site <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
-            <div class="project-detail"><p>Working with a team and customers, I helped take a campus security concept into a working CCTV analytics system.</p><p>The system brings together intrusion detection, person and vehicle tracking, number plate recognition, and real-time alerts. It was demonstrated at Bangalore Tech Summit 2022 and piloted at NIMHANS, Bengaluru.</p><p class="technology">Python · PyTorch · React · Node.js · MongoDB</p></div>
+            <h3 id="campus-title">Campus analytics</h3>
+            <p class="project-subtitle">Video analytics for campus security</p>
+            <div class="project-detail"><p>Working with a team and customers, I helped take a campus security concept into a working CCTV analytics system.</p><p>The system brings together intrusion detection, person and vehicle tracking, number plate recognition, and real-time alerts. It was demonstrated at Bangalore Tech Summit 2022 and piloted at NIMHANS, Bengaluru.</p></div>
+            <a class="text-link" href="https://sahasraaksha.github.io/" target="_blank" rel="noopener noreferrer">Visit project site <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+            <p class="technology">Python · PyTorch · React · Node.js · MongoDB</p>
           </div>
         </article>
-        <article class="flash-project" id="flashcards" aria-labelledby="flash-title">
-          <div><h3 id="flash-title">Flash cards</h3><p class="project-subtitle">A shared space to study and compete</p></div>
-          <div class="project-detail"><p>I built a study app with multiuser decks, timed study sessions, and quizzes with friends.</p><p>Attempt reviews help learners revisit their answers, while a leaderboard adds a shared challenge. The project also brought together a delivery and operations stack using Jenkins, Docker, Ansible, and ELK.</p><p class="technology">React · Node.js · MongoDB<br>Jenkins · Docker · Ansible · ELK</p></div>
+        <hr class="project-separator"> <!-- taste-skill-ignore: user-required separator between unified project cards. -->
+        <article class="project-card flash-project" id="flashcards" aria-labelledby="flash-title">
+          <div class="project-story">
+            <h3 id="flash-title">Flash cards</h3><p class="project-subtitle">A shared space to study and compete</p>
+            <div class="project-detail"><p>I built a study app with multiuser decks, timed study sessions, and quizzes with friends.</p><p>Attempt reviews help learners revisit their answers, while a leaderboard adds a shared challenge. The project also brought together a delivery and operations stack using Jenkins, Docker, Ansible, and ELK.</p></div>
+            <p class="technology">React · Node.js · MongoDB<br>Jenkins · Docker · Ansible · ELK</p>
+          </div>
         </article>
       </section>
 
