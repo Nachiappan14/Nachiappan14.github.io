@@ -1,3 +1,13 @@
+# Live GitHub Pages verification — 3 November 2026
+
+- Live site: https://nachiappan14.github.io/
+- Repository: https://github.com/Nachiappan14/Nachiappan14.github.io
+- Pushed local portfolio to `master` over SSH. Preserved the remote initial LICENSE by merging unrelated histories, without force-pushing (merge `dbefb0b`).
+- User changed Pages Source to **GitHub Actions**. Initial competing branch publication served source files and caused asset 404s; reran the workflow deployment job after the setting change.
+- Workflow: https://github.com/Nachiappan14/Nachiappan14.github.io/actions/runs/41600167230 (attempt 2).
+- Homepage, built CSS/JS, all 10 referenced image variants, both self-hosted fonts and résumé returned HTTP 200 after the rerun. Styled hero, photograph, navigation, theme and pause controls appeared in the live browser after reload. This is a deployment smoke check; the earlier six-size responsive and interaction QA remains below.
+- No application code or dependencies changed during deployment. Only `dist/` is published; future pushes to `master` deploy automatically.
+
 # Deployment preparation — 3 November 2026
 
 - User authorized commit, repository creation, push and GitHub Pages deployment.

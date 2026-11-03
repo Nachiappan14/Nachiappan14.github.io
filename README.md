@@ -76,8 +76,8 @@ See PLAN.md for the build sequence, file layout and acceptance checks.
 
 ## GitHub Pages deployment
 
-Target repository: `Nachiappan14/Nachiappan14.github.io` (public). Intended URL: https://nachiappan14.github.io/. User authorized committing existing work, creating the repository, pushing and deploying on 3 November 2026; this supersedes earlier local-only restrictions for this task.
+Target repository: `Nachiappan14/Nachiappan14.github.io` (public). Live URL: https://nachiappan14.github.io/. User authorized committing existing work, creating the repository, pushing and deploying on 3 November 2026; this supersedes earlier local-only restrictions for this task.
 
 `.github/workflows/deploy-pages.yml` builds the locked dependencies with Node 22.13.0 and publishes only `dist/` on pushes to the existing `master` branch or manual dispatch. Repository Settings → Pages → Source must be **GitHub Actions**. Vite's default `/` base is correct for this account-root repository; no custom domain is configured. See the [Vite deployment guide](https://vite.dev/guide/static-deploy.html#github-pages).
 
-Deployment is pending GitHub CLI authentication and repository creation. A successful local build is not a verified public deployment. After pushing, check the workflow and the live page, images, fonts and résumé before marking deployment complete.
+Deployed and verified on 3 November 2026. The user created the repository, SSH pushed `master`, and the initial remote license was preserved by merging histories. After switching Pages Source from branch publication to GitHub Actions, the deployment job was rerun. Homepage, built CSS/JS, all referenced images, both fonts and résumé returned HTTP 200; the styled live hero and enhancement controls were inspected in-browser. Future pushes to `master` automatically rebuild and deploy. GitHub CLI authentication was not needed.
